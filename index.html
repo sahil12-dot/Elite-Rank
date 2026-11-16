@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ELITE RANK – Top 10 Company Leadership Platform</title>
+<meta name="description" content="Ten seats. One summit. Outbid your rivals and claim a place on the ELITE RANK Top 10 leaderboard.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#000000;--panel:#0b0b0b;--gold:#bdbdbd;--gold-hi:#ffffff;--line:rgba(255,255,255,.28);--text:#f2f2f2;--mute:#9a9a9a;--bad:#e07a6b;--ok:#8fcf9b;
+--serif:"Cormorant Garamond",Georgia,"Times New Roman",serif;--sans:Manrope,system-ui,-apple-system,"Segoe UI",sans-serif;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth;color-scheme:dark}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--bg);color:var(--text);font:400 16px/1.6 var(--sans);-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.05;margin:0}
+h2{font-size:clamp(30px,5vw,44px);margin-bottom:12px}
+.gold{background:linear-gradient(120deg,var(--gold),var(--gold-hi) 50%,var(--gold));-webkit-background-clip:text;background-clip:text;color:transparent}
+.btn{font:700 14px var(--sans);letter-spacing:.04em;border:1px solid var(--gold);background:linear-gradient(120deg,#8a8a8a,var(--gold-hi));color:#000000;padding:13px 24px;border-radius:2px;cursor:pointer;transition:transform .2s,box-shadow .2s;text-decoration:none;display:inline-block}
+.btn:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(255,255,255,.28)}
+.btn.ghost{background:none;color:var(--gold-hi)}
+.btn:disabled{opacity:.5;cursor:wait;transform:none}
+:focus-visible{outline:2px solid var(--gold-hi);outline-offset:3px}
+header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:rgba(5,5,5,.88);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+header.top .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{font:700 24px var(--serif);letter-spacing:.14em;text-decoration:none}
+nav{display:flex;gap:18px;align-items:center;font-size:14px}
+nav a.l{text-decoration:none;color:var(--mute)}nav a.l:hover{color:var(--gold-hi)}
+@media(max-width:640px){nav a.l{display:none}}
+.hero{padding:64px 0 40px;background:radial-gradient(ellipse at 80% 0,rgba(255,255,255,.16),transparent 60%)}
+.hero .grid{display:grid;gap:36px;grid-template-columns:1.2fr 1fr;align-items:center}
+@media(max-width:820px){.hero .grid{grid-template-columns:1fr}}
+.hero h1{font-size:clamp(44px,8vw,84px);margin-bottom:18px}
+.hero p{color:var(--mute);max-width:46ch;margin:0 0 26px}
+.cta{display:flex;gap:12px;flex-wrap:wrap}
+.crown{border:1px solid var(--gold);background:var(--panel);padding:26px;position:relative;box-shadow:0 0 60px rgba(255,255,255,.12)}
+.crown::before{content:"";position:absolute;inset:6px;border:1px solid var(--line);pointer-events:none}
+.crown small{color:var(--mute);font-size:13px}
+.crown .n{font:600 clamp(30px,5vw,42px) var(--serif);margin:6px 0 2px}
+.crown .a{font:600 28px var(--serif)}
+section.s{padding:56px 0}
+.sub{color:var(--mute);margin:0 0 28px;max-width:60ch}
+.board{border:1px solid var(--line);background:var(--panel)}
+.row{display:grid;grid-template-columns:56px 1fr auto;gap:12px;align-items:center;padding:14px 18px;border-bottom:1px solid var(--line);transition:background .6s}
+.row:last-child{border-bottom:0}
+.row.flash{background:rgba(255,255,255,.18)}
+.row.me{box-shadow:inset 3px 0 var(--gold-hi)}
+.rk{font:600 34px var(--serif);color:var(--gold)}
+.row:first-child .rk{color:var(--gold-hi)}
+.nm{font-weight:700}.ds{color:var(--mute);font-size:13px}
+.am{font:600 22px var(--serif);text-align:right}
+.panel{border:1px solid var(--line);background:var(--panel);padding:24px}
+.two{display:grid;gap:24px;grid-template-columns:1fr 1fr}
+@media(max-width:820px){.two{grid-template-columns:1fr}}
+label{display:block;font-size:13px;color:var(--mute);margin:14px 0 6px}
+select,input{width:100%;background:#000;color:var(--text);border:1px solid var(--line);padding:12px;font:400 16px var(--sans);border-radius:2px}
+.hint{font-size:13px;color:var(--gold-hi);margin-top:8px;min-height:20px}
+.msg{margin-top:12px;font-size:14px;min-height:22px}.msg.bad{color:var(--bad)}.msg.ok{color:var(--ok)}
+.pm{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.pm button{background:#000;border:1px solid var(--line);color:var(--text);padding:12px 6px;font:500 13px var(--sans);cursor:pointer;border-radius:2px}
+.pm button[aria-pressed=true]{border-color:var(--gold-hi);color:var(--gold-hi)}
+.steps{display:grid;gap:16px;grid-template-columns:repeat(4,1fr);counter-reset:s}
+@media(max-width:820px){.steps{grid-template-columns:1fr 1fr}}@media(max-width:480px){.steps{grid-template-columns:1fr}}
+.step{border-top:2px solid var(--gold);padding-top:14px}
+.step::before{counter-increment:s;content:counter(s);font:600 34px var(--serif);color:var(--gold)}
+.step h3{font-size:22px;margin:4px 0 6px}.step p{color:var(--mute);font-size:14px;margin:0}
+table{width:100%;border-collapse:collapse;font-size:14px}th,td{text-align:left;padding:10px 8px;border-bottom:1px solid var(--line)}th{color:var(--mute);font-weight:500}
+.tw{overflow-x:auto}
+.st{padding:2px 8px;border:1px solid;border-radius:20px;font-size:12px}.st.p{color:var(--gold-hi)}.st.s{color:var(--ok)}.st.f{color:var(--bad)}
+.qr{width:150px;height:150px;border:1px dashed var(--gold);display:grid;place-items:center;color:var(--mute);font-size:12px;text-align:center;padding:10px}
+footer{border-top:1px solid var(--line);padding:36px 0;color:var(--mute);font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+footer a{margin-right:16px;text-decoration:none}
+dialog{background:var(--panel);color:var(--text);border:1px solid var(--gold);padding:28px;width:min(420px,92vw)}
+dialog::backdrop{background:rgba(0,0,0,.8)}
+.spin{display:inline-block;width:14px;height:14px;border:2px solid rgba(0,0,0,.3);border-top-color:#000;border-radius:50%;animation:r .8s linear infinite;vertical-align:-2px;margin-right:8px}
+@keyframes r{to{transform:rotate(360deg)}}
+.demo{background:rgba(255,255,255,.1);border-bottom:1px solid var(--line);font-size:13px;text-align:center;padding:8px 12px;color:var(--gold-hi)}
+body{background:radial-gradient(ellipse at 15% -10%,rgba(255,255,255,.13),transparent 50%),radial-gradient(ellipse at 100% 60%,rgba(255,255,255,.07),transparent 50%),var(--bg)}
+.hero h1 .gold{background-size:220% 100%;animation:sheen 6s ease-in-out infinite}
+@keyframes sheen{0%,100%{background-position:0 0}50%{background-position:100% 0}}
+.orn{display:flex;align-items:center;gap:14px;margin:0 0 20px}
+.orn i{width:8px;height:8px;background:var(--gold-hi);transform:rotate(45deg);box-shadow:0 0 14px var(--gold)}
+.orn::after{content:"";height:1px;width:90px;background:linear-gradient(90deg,var(--gold),transparent)}
+.row:hover{background:rgba(255,255,255,.08)}
+.row:nth-child(1){background:linear-gradient(90deg,rgba(255,255,255,.18),transparent 75%)}
+.row:nth-child(2),.row:nth-child(3){background:linear-gradient(90deg,rgba(255,255,255,.08),transparent 65%)}
+.row:nth-child(-n+3) .nm{font:600 22px var(--serif)}
+.row:nth-child(1) .rk{font-size:50px;text-shadow:0 0 26px rgba(255,255,255,.55)}
+.crown{animation:glow 4s ease-in-out infinite}
+@keyframes glow{50%{box-shadow:0 0 100px rgba(255,255,255,.3)}}
+.btn{box-shadow:inset 0 1px 0 rgba(255,255,255,.35)}
+.panel{border-image:linear-gradient(135deg,var(--gold-hi),var(--line) 40%,var(--gold)) 1}
+.board{border-image:linear-gradient(135deg,var(--gold-hi),var(--line) 40%,var(--gold)) 1}
+.pre{position:fixed;inset:0;z-index:100;background:#000;display:grid;place-items:center;transition:opacity .8s,visibility 0s .8s}
+.pre.off{opacity:0;visibility:hidden}
+.pre b{font:600 clamp(34px,9vw,64px) var(--serif);letter-spacing:.3em;padding-left:.3em;background:linear-gradient(100deg,#3a3a3a 20%,var(--gold-hi) 50%,#3a3a3a 80%) 0 0/250% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:pre 1.6s ease-out forwards}
+@keyframes pre{from{background-position:100% 0;opacity:.2}to{background-position:0 0;opacity:1}}
+.top3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:8px}
+.tb{border:1px solid var(--line);background:var(--panel);padding:20px 14px;text-align:center}
+.tb .no{font:600 46px var(--serif);color:var(--gold);line-height:1}
+.tb.t1{border-color:var(--gold-hi);box-shadow:0 0 50px rgba(255,255,255,.22);background:linear-gradient(180deg,rgba(255,255,255,.16),var(--panel))}
+.tb.t1 .no{color:var(--gold-hi);text-shadow:0 0 22px rgba(255,255,255,.5)}
+.tb .tn{font:600 21px var(--serif);margin:10px 0 2px}
+.tb .ta{font:600 21px var(--serif);color:var(--gold-hi);margin-top:6px}
+@media(max-width:560px){.top3{gap:8px}.tb{padding:14px 6px}.tb .no{font-size:34px}.tb .tn,.tb .ta{font-size:15px}.tb .ds{display:none}}
+.crown .art{display:block;width:100%;height:auto;margin:-8px 0 16px;border-bottom:1px solid var(--line)}
+.art .rays{transform-origin:200px 105px;animation:spin 90s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.art .cr{filter:drop-shadow(0 0 8px rgba(255,255,255,.6))}
+:root{--c1:#ffb547;--c2:#4da3ff;--c3:#c084fc;--c4:#2fd6a3;--c5:#ff5d7a}
+.gold{background-image:linear-gradient(110deg,var(--c1),var(--c5) 35%,var(--c3) 65%,var(--c2));background-size:220% 100%}
+.btn{background:linear-gradient(110deg,var(--c2),var(--c3) 55%,var(--c5));color:#fff;border-color:transparent}
+.btn:hover{box-shadow:0 8px 28px rgba(192,132,252,.45)}
+.btn.ghost{background:none;color:#fff;border-color:var(--c2)}
+.panel,.board{border-image:linear-gradient(135deg,var(--c2),var(--c3),var(--c5)) 1}
+.crown{border-color:var(--c3)}.crown .a{color:var(--c1)}
+.demo{color:var(--c1);background:rgba(255,181,71,.08)}
+.hint{color:var(--c1)}
+.pm button[aria-pressed=true]{border-color:var(--c4);color:var(--c4)}
+.row.me{box-shadow:inset 3px 0 var(--c4)}
+.row:nth-child(1){background:linear-gradient(90deg,rgba(255,181,71,.2),transparent 75%)}
+.row:nth-child(2){background:linear-gradient(90deg,rgba(77,163,255,.16),transparent 65%)}
+.row:nth-child(3){background:linear-gradient(90deg,rgba(192,132,252,.16),transparent 65%)}
+.row:nth-child(1) .rk{color:var(--c1);text-shadow:0 0 26px rgba(255,181,71,.55)}
+.row:nth-child(2) .rk{color:var(--c2)}.row:nth-child(3) .rk{color:var(--c3)}
+.tb.t1{border-color:var(--c1);box-shadow:0 0 50px rgba(255,181,71,.25);background:linear-gradient(180deg,rgba(255,181,71,.18),var(--panel))}
+.tb.t1 .no,.tb.t1 .ta{color:var(--c1);text-shadow:0 0 22px rgba(255,181,71,.5)}
+.tb.t2{border-color:var(--c2);background:linear-gradient(180deg,rgba(77,163,255,.16),var(--panel))}
+.tb.t2 .no,.tb.t2 .ta{color:var(--c2)}
+.tb.t3{border-color:var(--c3);background:linear-gradient(180deg,rgba(192,132,252,.16),var(--panel))}
+.tb.t3 .no,.tb.t3 .ta{color:var(--c3)}
+.step:nth-child(1){border-top-color:var(--c1)}.step:nth-child(1)::before{color:var(--c1)}
+.step:nth-child(2){border-top-color:var(--c2)}.step:nth-child(2)::before{color:var(--c2)}
+.step:nth-child(3){border-top-color:var(--c3)}.step:nth-child(3)::before{color:var(--c3)}
+.step:nth-child(4){border-top-color:var(--c4)}.step:nth-child(4)::before{color:var(--c4)}
+.art .rays{stroke:var(--c2)}
+.art .cr{stroke:var(--c1);filter:drop-shadow(0 0 10px rgba(255,181,71,.7))}
+.art .cr circle{fill:var(--c1)}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div class="pre" id="pre" aria-hidden="true"><b>ELITE RANK</b></div>
+<div class="demo">Live accounts and leaderboard. Payments connect in the next phase, so no bid can change a rank yet.</div>
+<header class="top"><div class="wrap">
+<a class="logo gold" href="#top">ELITE RANK</a>
+<nav><a class="l" href="#leaderboard">Leaderboard</a><a class="l" href="#how">How it works</a><a class="l" href="#payments">Payments</a>
+<button class="btn ghost" id="authBtn" type="button">Log in</button></nav>
+</div></header>
+
+<main id="top">
+<section class="hero"><div class="wrap grid">
+<div>
+<div class="orn"><i></i></div>
+<h1>Ten seats.<br><span class="gold">One summit.</span></h1>
+<p>Outbid the company above you and take its place on India’s most exclusive leaderboard. Every rank is earned with a verified payment in rupees.</p>
+<div class="cta"><button class="btn" id="joinBtn" type="button">Join the competition</button><a class="btn ghost" href="#leaderboard">See the Top 10</a></div>
+</div>
+<div class="crown" aria-live="polite">
+<svg class="art" viewBox="0 0 400 220" role="img" aria-label="A crown above a city skyline"><g class="rays" stroke="#fff" stroke-opacity=".16"><line x1="-120" y1="105" x2="520" y2="105"/><line x1="-120" y1="105" x2="520" y2="105" transform="rotate(30 200 105)"/><line x1="-120" y1="105" x2="520" y2="105" transform="rotate(60 200 105)"/><line x1="-120" y1="105" x2="520" y2="105" transform="rotate(90 200 105)"/><line x1="-120" y1="105" x2="520" y2="105" transform="rotate(120 200 105)"/><line x1="-120" y1="105" x2="520" y2="105" transform="rotate(150 200 105)"/></g><g fill="none" stroke="#fff" stroke-opacity=".2"><circle cx="200" cy="105" r="60"/><circle cx="200" cy="105" r="95"/><circle cx="200" cy="105" r="130"/></g><g fill="#0b0b0b" stroke="#fff" stroke-opacity=".45"><rect x="6" y="175" width="30" height="45"/><rect x="36" y="150" width="24" height="70"/><rect x="60" y="180" width="30" height="40"/><rect x="90" y="135" width="22" height="85"/><rect x="112" y="165" width="34" height="55"/><rect x="254" y="160" width="30" height="60"/><rect x="284" y="132" width="22" height="88"/><rect x="306" y="172" width="32" height="48"/><rect x="338" y="148" width="24" height="72"/><rect x="362" y="178" width="34" height="42"/></g><g class="cr" fill="#000" stroke="#fff" stroke-width="2.2" stroke-linejoin="round"><path d="M140 130 L150 78 L175 105 L200 62 L225 105 L250 78 L260 130 Z"/><rect x="140" y="134" width="120" height="12"/><circle cx="150" cy="78" r="4" fill="#fff"/><circle cx="200" cy="62" r="5" fill="#fff"/><circle cx="250" cy="78" r="4" fill="#fff"/></g></svg>
+<small>Current #1 company</small>
+<div class="n gold" id="c1n"></div>
+<div class="ds" id="c1d"></div>
+<div class="a" id="c1a"></div>
+</div>
+</div></section>
+
+<section class="wrap"><div class="top3" id="top3" aria-live="polite"></div></section>
+
+<section class="s" id="leaderboard"><div class="wrap">
+<h2>Live Top 10</h2>
+<p class="sub">Rankings reorder the moment a payment clears. Only ten companies appear here.</p>
+<div class="board" id="board" aria-live="polite"></div>
+</div></section>
+
+<section class="s" id="bid"><div class="wrap two">
+<div class="panel">
+<h2>Place a bid</h2>
+<p class="sub" style="margin-bottom:0">Pick the position you want. Your bid must beat that position’s current bid.</p>
+<label for="pos">Target position</label>
+<select id="pos"></select>
+<div class="hint" id="min"></div>
+<label for="amt">Your bid (₹)</label>
+<input id="amt" type="number" inputmode="numeric" min="0" step="1000">
+<label>Payment method</label>
+<div class="pm" id="pm">
+<button type="button" aria-pressed="true">UPI QR</button><button type="button" aria-pressed="false">UPI app</button><button type="button" aria-pressed="false">Debit / Credit card</button>
+</div>
+<div style="margin-top:18px"><button class="btn" id="payBtn" type="button">Pay and bid</button></div>
+<div class="msg" id="msg" role="status"></div>
+</div>
+<div class="panel" id="dash">
+<h2>Your dashboard</h2>
+<div id="dashBody"><p class="sub">Log in or register your company to see your rank, bids and payment history.</p></div>
+</div>
+</div></section>
+
+<section class="s" id="how"><div class="wrap">
+<h2>How it works</h2><p class="sub">A clear path from registration to the top of the board.</p>
+<div class="steps">
+<div class="step"><h3>Register</h3><p>Create a company account with your business details.</p></div>
+<div class="step"><h3>Choose a seat</h3><p>Select a target position. We show the minimum valid bid.</p></div>
+<div class="step"><h3>Pay in ₹</h3><p>Pay by UPI, debit card or credit card through the gateway.</p></div>
+<div class="step"><h3>Rise</h3><p>Once the gateway confirms payment, the board updates.</p></div>
+</div></section>
+
+<section class="s" id="payments"><div class="wrap two">
+<div class="panel">
+<h2>Payment information</h2>
+<p class="sub">All amounts are in Indian rupees (₹). A scan or screenshot never changes a rank; only a payment the gateway confirms to our server does.</p>
+<p class="ds">Every payment gets a unique transaction ID and shows Pending, Successful or Failed. Card numbers and CVV never touch our systems.</p>
+</div>
+<div class="panel" style="display:flex;gap:20px;align-items:center;flex-wrap:wrap">
+<div class="qr">UPI QR image, uploaded by the admin</div>
+<p class="ds" style="flex:1;min-width:160px;margin:0">Scan with any UPI app. The QR is for display; your bid counts once payment is verified.</p>
+</div>
+</div></section>
+</main>
+
+<footer><div class="wrap">
+<div><strong class="gold" style="font-family:var(--serif);font-size:20px;letter-spacing:.12em">ELITE RANK</strong><br>© 2026 ELITE RANK. All rights reserved.</div>
+<div><a href="#">Contact</a><a href="#">Terms</a><a href="#">Privacy</a><a href="#">Refund policy</a></div>
+</div></footer>
+
+<dialog id="dlg"><form method="dialog" id="af" style="margin:0">
+<h2 id="dt">Log in</h2>
+<label for="em">Email</label><input id="em" type="email" required autocomplete="email">
+<div id="regF" hidden><label for="co">Company name</label><input id="co" autocomplete="organization"><label for="ind">Industry and city</label><input id="ind" placeholder="e.g. Fintech, Mumbai"></div>
+<label for="pw">Password</label><input id="pw" type="password" required minlength="6" autocomplete="current-password">
+<div class="msg bad" id="am"></div>
+<div style="display:flex;gap:10px;margin-top:16px;flex-wrap:wrap"><button class="btn" id="asub" type="submit">Log in</button><button class="btn ghost" type="button" id="swap">Register instead</button><button class="btn ghost" type="button" id="cls">Close</button></div>
+</form></dialog>
+
+<script type="module">
+import{initializeApp}from"https://www.gstatic.com/firebasejs/10.14.1/firebase-app.js";
+import{getAuth,onAuthStateChanged,createUserWithEmailAndPassword,signInWithEmailAndPassword,signOut}from"https://www.gstatic.com/firebasejs/10.14.1/firebase-auth.js";
+import{getFirestore,doc,setDoc,onSnapshot,collection,query,where,orderBy,serverTimestamp}from"https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore.js";
+
+const app=initializeApp({
+  apiKey:"AIzaSyDPYKavCrMaUX0uKyeLVObU_1IhQhokKz0",
+  authDomain:"elite-rank-e1c07.firebaseapp.com",
+  projectId:"elite-rank-e1c07",
+  storageBucket:"elite-rank-e1c07.firebasestorage.app",
+  messagingSenderId:"597890463284",
+  appId:"1:597890463284:web:aed08fdc25f53788bfbc61",
+  measurementId:"G-BDE13PP520"
+});
+const auth=getAuth(app),db=getFirestore(app);
+const $=id=>document.getElementById(id);
+const inr=n=>"₹"+Number(n).toLocaleString("en-IN");
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const ms=t=>t&&t.toMillis?t.toMillis():0;
+const STEP=5000,BASE=10000;
+const EMPTY='<p class="sub">Log in or register your company to see your rank, bids and payment history.</p>';
+let seats={},prev={},loaded=false,user=null,profile=null,bids=[],pays=[],method="UPI QR",unsubs=[];
+
+function minBid(){const c=seats[+$("pos").value];return c?c.bid+STEP:BASE}
+function say(t,c){const m=$("msg");m.textContent=t;m.className="msg "+(c||"")}
+
+function render(){
+  let h="";
+  for(let i=1;i<=10;i++){
+    const c=seats[i],key=c?c.name+"|"+c.bid:"",fl=loaded&&prev[i]!==undefined&&prev[i]!==key;
+    prev[i]=key;
+    h+=`<div class="row${fl?" flash":""}${user&&c&&c.uid===user.uid?" me":""}"><div class="rk">${i}</div><div><div class="nm">${c?esc(c.name):"Open seat"}</div><div class="ds">${c?esc(c.desc||""):"Claim this rank with a bid"}</div></div><div class="am">${c?inr(c.bid):"from "+inr(BASE)}</div></div>`;
+  }
+  $("board").innerHTML=h;
+  if(loaded)setTimeout(()=>document.querySelectorAll(".row.flash").forEach(r=>r.classList.remove("flash")),1400);
+  const c1=seats[1];
+  $("c1n").textContent=c1?c1.name:"Rank 1 is open";
+  $("c1d").textContent=c1?(c1.desc||""):"Be the first company at the top";
+  $("c1a").textContent=c1?inr(c1.bid):"from "+inr(BASE);
+  $("top3").innerHTML=[1,2,3].map(i=>{const c=seats[i];return`<div class="tb t${i}"><div class="no">${i}</div><div class="tn">${c?esc(c.name):"Open seat"}</div><div class="ds">${c?esc(c.desc||""):"Waiting for a bidder"}</div><div class="ta">${c?inr(c.bid):"from "+inr(BASE)}</div></div>`}).join("");
+  const sel=$("pos"),cur=sel.value||"1";
+  sel.innerHTML="";
+  for(let i=1;i<=10;i++){const o=document.createElement("option");o.value=i;o.textContent="Rank "+i+(seats[i]?" (current "+inr(seats[i].bid)+")":" (open)");sel.appendChild(o)}
+  sel.value=cur;hint();dash();
+}
+function hint(){$("min").textContent="Minimum valid bid: "+inr(minBid());const a=$("amt");if(!a.value||+a.value<minBid())a.value=minBid()}
+
+function dash(){
+  if(!user){$("dashBody").innerHTML=EMPTY;return}
+  const mine=Object.keys(seats).find(k=>seats[k].uid===user.uid);
+  const rank=mine?"#"+mine:"Not ranked",bid=mine?inr(seats[mine].bid):"–";
+  const name=profile?profile.name:user.email;
+  const cls={Pending:"p",Successful:"s",Failed:"f"};
+  const b=bids.map(x=>`<tr><td>${x.createdAt?x.createdAt.toDate().toLocaleString("en-IN"):"–"}</td><td>Rank ${esc(x.targetRank)}</td><td>${inr(x.amount)}</td></tr>`).join("")||'<tr><td colspan="3" class="ds">No bids yet. Place your first bid.</td></tr>';
+  const p=pays.map(x=>`<tr><td>${esc(x.id)}</td><td>${inr(x.amount)}</td><td><span class="st ${cls[x.status]||"p"}">${esc(x.status)}</span></td></tr>`).join("")||'<tr><td colspan="3" class="ds">No payments yet.</td></tr>';
+  $("dashBody").innerHTML=`<p class="ds" style="margin:0 0 6px">${esc(name)}</p><div style="display:flex;gap:30px;margin-bottom:12px"><div><div class="ds">Current rank</div><div class="am" style="text-align:left">${rank}</div></div><div><div class="ds">Current bid</div><div class="am" style="text-align:left">${bid}</div></div></div><div class="tw"><table><tr><th>Bidding history</th><th>Target</th><th>Amount</th></tr>${b}</table></div><div class="tw" style="margin-top:14px"><table><tr><th>Transaction ID</th><th>Amount</th><th>Status</th></tr>${p}</table></div><p style="margin:14px 0 0"><button class="btn ghost" id="out" type="button">Log out</button></p>`;
+}
+$("dashBody").onclick=e=>{if(e.target.id==="out")signOut(auth)};
+
+onSnapshot(query(collection(db,"leaderboard"),orderBy("rank")),s=>{
+  seats={};s.forEach(d=>{const x=d.data();seats[x.rank]=x});render();loaded=true;
+},()=>{$("board").innerHTML='<div class="row"><div></div><div class="ds">Could not load the leaderboard. Check your connection and Firestore rules.</div><div></div></div>'});
+
+onAuthStateChanged(auth,u=>{
+  unsubs.forEach(f=>f());unsubs=[];user=u;profile=null;bids=[];pays=[];
+  if(u){
+    unsubs.push(onSnapshot(doc(db,"companies",u.uid),s=>{profile=s.exists()?s.data():null;dash()}));
+    unsubs.push(onSnapshot(query(collection(db,"bids"),where("uid","==",u.uid)),s=>{bids=s.docs.map(d=>d.data()).sort((a,b)=>ms(b.createdAt)-ms(a.createdAt));dash()}));
+    unsubs.push(onSnapshot(query(collection(db,"payments"),where("uid","==",u.uid)),s=>{pays=s.docs.map(d=>({id:d.id,...d.data()})).sort((a,b)=>ms(b.createdAt)-ms(a.createdAt));dash()}));
+  }
+  $("authBtn").textContent=u?"Dashboard":"Log in";
+  render();
+});
+
+$("pos").onchange=()=>{$("amt").value="";hint()};
+$("pm").onclick=e=>{const b=e.target.closest("button");if(!b)return;method=b.textContent;[...$("pm").children].forEach(x=>x.setAttribute("aria-pressed",x===b))};
+$("payBtn").onclick=()=>{
+  if(!user){openDlg(true);return}
+  const a=Math.floor(+$("amt").value);
+  if(!a||a<minBid()){say("Bid at least "+inr(minBid())+" for Rank "+$("pos").value+".","bad");return}
+  if(Object.values(seats).some(c=>c.bid===a)){say("Another company already holds a bid of "+inr(a)+". Choose a different amount.","bad");return}
+  say("Your bid is valid, but the payment gateway isn’t connected yet. Nothing was charged and no rank changed.");
+};
+
+let reg=false;const dlg=$("dlg");
+const errs={"auth/email-already-in-use":"This email is already registered. Log in instead.","auth/invalid-credential":"Email or password is incorrect.","auth/wrong-password":"Email or password is incorrect.","auth/user-not-found":"Email or password is incorrect.","auth/weak-password":"Use at least 6 characters for the password.","auth/invalid-email":"Enter a valid email address.","auth/too-many-requests":"Too many attempts. Wait a few minutes and try again.","auth/unauthorized-domain":"This website’s domain isn’t authorized in Firebase Authentication settings.","auth/operation-not-allowed":"Email/Password sign-in isn’t enabled in Firebase yet."};
+function openDlg(r){reg=r;$("dt").textContent=r?"Register your company":"Log in";$("regF").hidden=!r;$("co").required=r;$("asub").textContent=r?"Create account":"Log in";$("swap").textContent=r?"Log in instead":"Register instead";$("am").textContent="";dlg.showModal()}
+$("authBtn").onclick=()=>user?$("dash").scrollIntoView():openDlg(false);
+$("joinBtn").onclick=()=>openDlg(true);
+$("swap").onclick=()=>openDlg(!reg);
+$("cls").onclick=()=>dlg.close();
+$("af").onsubmit=async e=>{
+  e.preventDefault();
+  const em=$("em").value.trim(),pw=$("pw").value,co=$("co").value.trim(),ind=$("ind").value.trim();
+  if(reg&&co.length<2){$("am").textContent="Enter your company name (at least 2 letters).";return}
+  const b=$("asub");b.disabled=true;$("am").textContent="";
+  try{
+    if(reg){
+      const c=await createUserWithEmailAndPassword(auth,em,pw);
+      await setDoc(doc(db,"companies",c.user.uid),{name:co,industry:ind,email:em,status:"active",createdAt:serverTimestamp()});
+    }else await signInWithEmailAndPassword(auth,em,pw);
+    dlg.close();$("bid").scrollIntoView();
+  }catch(err){$("am").textContent=errs[err.code]||"Something went wrong. Try again."}
+  b.disabled=false;
+};
+render();
+</script>
+</body>
+</html>
